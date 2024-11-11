@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".SignUpActivity">
 
 
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/eatspeherexd" />   
+        app:srcCompat="@drawable/eatspeherexd" />
 
     <TextView
         android:id="@+id/textView5"
@@ -44,13 +44,12 @@
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="Choose your Location"
         android:textColor="@color/black"
-        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
         app:layout_editor_absoluteX="20dp"
@@ -58,32 +57,68 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="57dp"
-        android:layout_marginTop="32dp"
-        app:layout_goneMarginTop="10dp"
-        app:boxStrokeWidthFocused="0dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginRight="32dp"
-        app:boxStrokeWidth = "0dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:endIconDrawable="@drawable/arrowdown"
-        style = "@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" >
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_goneMarginTop="10dp">
 
         <AutoCompleteTextView
             android:id="@+id/listOfLocation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
-            android:text="Choose Location"/>
+            android:text="Choose Location" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- First EditText: Owner Name -->
+
+    <!-- Second EditText: Restaurant Name -->
+    <EditText
+        android:id="@+id/editTextOwnerName"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@drawable/userplus"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Name of Owner"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#575555"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextRestaurantName"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:drawableLeft="@drawable/home"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Name of Restaurant"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#575555"
+        app:layout_constraintEnd_toEndOf="@+id/editTextOwnerName"
+        app:layout_constraintStart_toStartOf="@+id/editTextOwnerName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOwnerName" />
+
+    <!-- Third EditText: Email -->
+    <EditText
+        android:id="@+id/editTextEmail"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:drawableLeft="@drawable/mail"
@@ -93,14 +128,14 @@
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
         android:textColor="@color/black"
-        android:layout_marginTop="12dp"
         android:textColorHint="#575555"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextRestaurantName"
+        app:layout_constraintStart_toStartOf="@+id/editTextRestaurantName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRestaurantName" />
 
+    <!-- Fourth EditText: Password -->
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextPassword"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -112,9 +147,9 @@
         android:paddingLeft="15dp"
         android:textColor="@color/black"
         android:textColorHint="#575555"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
     <TextView
         android:id="@+id/textView7"
@@ -123,9 +158,9 @@
         android:layout_marginTop="20dp"
         android:text="Or"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <TextView
         android:id="@+id/textView8"
@@ -138,7 +173,6 @@
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:layout_width="152dp"
