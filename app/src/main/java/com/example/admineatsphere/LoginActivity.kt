@@ -18,8 +18,9 @@ import com.example.admineatsphere.databinding.ActivityLoginBinding
         setContentView(binding.root)
 
         binding.loginbutton.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish() // Closes LoginActivity so it doesn’t stay in the back stack
         }
 
         binding.donthavebutton.setOnClickListener {
