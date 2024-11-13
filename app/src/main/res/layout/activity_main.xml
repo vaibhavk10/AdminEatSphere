@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="30"
-                android:textColor="#D32F2F"
+                android:textColor="#FF0000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView8"
                 app:layout_constraintHorizontal_bias="0.51"
@@ -158,7 +158,8 @@
                 android:src="@drawable/plus"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#B9D37C"/>
 
             <TextView
                 android:id="@+id/addMenuText"
@@ -167,7 +168,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Add Menu"
-                android:textColor="#4A4A4A"
+                android:textColor="#FFB9D37C"
                 app:layout_constraintEnd_toEndOf="@+id/imageView6"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView6"
@@ -200,7 +201,8 @@
                 android:src="@drawable/eye"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#E0C54C"/>
 
             <TextView
                 android:id="@+id/addMenuTex7"
@@ -209,7 +211,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Add Item Menu"
-                android:textColor="#4A4A4A"
+                android:textColor="#FFE0C54C"
                 app:layout_constraintEnd_toEndOf="@+id/imageView7"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView7"
@@ -243,7 +245,8 @@
                 android:src="@drawable/user"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#039BE5"/>
 
             <TextView
                 android:id="@+id/addMenuText8"
@@ -252,7 +255,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Profile"
-                android:textColor="#4A4A4A"
+                android:textColor="#FF039BE5"
                 app:layout_constraintEnd_toEndOf="@+id/imageView8"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView8"
@@ -284,7 +287,8 @@
                 android:src="@drawable/userplus"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#8C72C1"/>
 
             <TextView
                 android:id="@+id/addMenuText9"
@@ -293,7 +297,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Create New User"
-                android:textColor="#4A4A4A"
+                android:textColor="#FF8C72C1"
                 app:layout_constraintEnd_toEndOf="@+id/imageView9"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView9"
