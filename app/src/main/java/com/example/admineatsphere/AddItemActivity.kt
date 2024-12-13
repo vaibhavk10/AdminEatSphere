@@ -19,8 +19,12 @@ class AddItemActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.selectedImage.setOnClickListener {
+        binding.itemImageLabel.setOnClickListener {
             pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+        }
+
+        binding.backButton.setOnClickListener{
+            finish()
         }
     }
 

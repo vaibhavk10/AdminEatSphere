@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA">
+    android:background="#F8F9FF">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -33,10 +33,11 @@
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="108dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:cardCornerRadius="15dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
@@ -44,7 +45,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#CEF2EF">
+            android:background="@drawable/gradient_card_bg">
 
             <TextView
                 android:id="@+id/textView8"
@@ -55,8 +56,8 @@
                 android:fontFamily="@font/latoregular"
                 android:text="Pending\nOrder"
                 android:textAlignment="center"
-                android:textColor="#333333"
-                android:textSize="20sp"
+                android:textColor="#2D3748"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,8 +70,8 @@
                 android:fontFamily="@font/latoregular"
                 android:text="Completed\nOrder"
                 android:textAlignment="center"
-                android:textColor="#333333"
-                android:textSize="20sp"
+                android:textColor="#2D3748"
+                android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/textView8"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,8 +81,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="30"
-                android:textColor="#FFC107"
-                android:textSize="20sp"
+                android:textColor="#10B981"
+                android:textSize="28sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView9"
                 app:layout_constraintHorizontal_bias="0.533"
                 app:layout_constraintStart_toStartOf="@+id/textView9"
@@ -95,8 +97,8 @@
                 android:fontFamily="@font/latoregular"
                 android:text="Total\nEarning"
                 android:textAlignment="center"
-                android:textColor="#333333"
-                android:textSize="20sp"
+                android:textColor="#2D3748"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.555"
                 app:layout_constraintStart_toEndOf="@+id/textView9"
@@ -109,8 +111,9 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/latoregular"
                 android:text="30$"
-                android:textColor="#4CAF50"
-                android:textSize="20sp"
+                android:textColor="#3B82F6"
+                android:textSize="28sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textViewWholeEarning"
                 app:layout_constraintStart_toStartOf="@+id/textViewWholeEarning"
                 app:layout_constraintTop_toBottomOf="@+id/textViewWholeEarning" />
@@ -121,8 +124,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="30"
-                android:textColor="#FF0000"
-                android:textSize="20sp"
+                android:textColor="#Ff0000"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/latobold"
                 app:layout_constraintEnd_toEndOf="@+id/textView8"
                 app:layout_constraintHorizontal_bias="0.489"
                 app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -138,8 +143,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#F0F4C3"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#F0F9FF"
         app:layout_constraintEnd_toStartOf="@+id/cardViewAllItemMenu"
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,7 +155,7 @@
             android:id="@+id/addMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F0F4C3">
+            android:background="#F0F9FF">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -160,7 +166,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#B9D37C"/>
+                app:tint="#0EA5E9"/>
 
             <TextView
                 android:id="@+id/addMenuText"
@@ -169,7 +175,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Add Menu"
-                android:textColor="#FFB9D37C"
+                android:textColor="#0EA5E9"
                 app:layout_constraintEnd_toEndOf="@+id/imageView6"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView6"
@@ -184,15 +190,17 @@
         android:layout_height="100dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#FFECB3"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FEF9C3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/allItemMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFECB3">
+            android:background="#FEF9C3">
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -203,7 +211,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#E0C54C"/>
+                app:tint="#CA8A04"/>
 
             <TextView
                 android:id="@+id/addMenuTex7"
@@ -212,7 +220,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Add Item Menu"
-                android:textColor="#FFE0C54C"
+                android:textColor="#CA8A04"
                 app:layout_constraintEnd_toEndOf="@+id/imageView7"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView7"
@@ -227,7 +235,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#BBDEFB"
+        app:cardBackgroundColor="#EFF6FF"
         app:layout_constraintEnd_toStartOf="@+id/cardViewCreateNewUser"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cardViewAddMenu"
@@ -236,7 +244,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#BBDEFB">
+            android:background="#EFF6FF">
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -247,7 +255,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#039BE5"/>
+                app:tint="#3B82F6"/>
 
             <TextView
                 android:id="@+id/addMenuText8"
@@ -256,7 +264,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Profile"
-                android:textColor="#FF039BE5"
+                android:textColor="#3B82F6"
                 app:layout_constraintEnd_toEndOf="@+id/imageView8"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView8"
@@ -271,14 +279,14 @@
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#D1C4E9"
+        app:cardBackgroundColor="#F3E8FF"
         app:layout_constraintEnd_toEndOf="@+id/cardViewAllItemMenu"
         app:layout_constraintTop_toBottomOf="@+id/cardViewAllItemMenu">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#D1C4E9">
+            android:background="#F3E8FF">
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -289,7 +297,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#8C72C1"/>
+                app:tint="#9333EA"/>
 
             <TextView
                 android:id="@+id/addMenuText9"
@@ -298,7 +306,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Create New User"
-                android:textColor="#FF8C72C1"
+                android:textColor="#9333EA"
                 app:layout_constraintEnd_toEndOf="@+id/imageView9"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView9"
@@ -313,14 +321,14 @@
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#FFE5E5"
+        app:cardBackgroundColor="#FEE2E2"
         app:layout_constraintEnd_toEndOf="@+id/cardViewCreateNewUser"
         app:layout_constraintTop_toBottomOf="@+id/cardViewCreateNewUser">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFE5E5">
+            android:background="#FEE2E2">
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -331,7 +339,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#D32F2F" />
+                app:tint="#DC2626" />
 
             <TextView
                 android:id="@+id/addMenuText11"
@@ -340,7 +348,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Logout"
-                android:textColor="#D32F2F"
+                android:textColor="#DC2626"
                 app:layout_constraintEnd_toEndOf="@+id/imageView11"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView11"
@@ -354,7 +362,7 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#E0F7DF"
+        app:cardBackgroundColor="#ECFDF5"
         android:layout_marginEnd="22dp"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toStartOf="@+id/cardViewCreateNewUser2"
@@ -364,7 +372,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#E0F7DF">
+            android:background="#ECFDF5">
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -375,7 +383,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#388E3C" />
+                app:tint="#059669" />
 
             <TextView
                 android:id="@+id/addMenuText10"
@@ -384,7 +392,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/latobold"
                 android:text="Order Dispatch"
-                android:textColor="#388E3C"
+                android:textColor="#059669"
                 app:layout_constraintEnd_toEndOf="@+id/imageView10"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="@+id/imageView10"
