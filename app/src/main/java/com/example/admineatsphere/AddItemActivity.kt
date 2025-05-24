@@ -35,4 +35,3 @@ class AddItemActivity : AppCompatActivity() {
             }
         }
 }
-

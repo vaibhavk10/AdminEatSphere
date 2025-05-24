@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -20,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="#FEF9C3"
+            android:background="#319E58DB"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -32,7 +31,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 app:cardCornerRadius="15dp"
-                app:cardBackgroundColor="#FEF9C3"
+                app:cardBackgroundColor="#319E58DB"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -77,10 +76,11 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/minus"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/popular_button_background"
                 app:layout_constraintBottom_toBottomOf="@id/quantityTextView"
                 app:layout_constraintEnd_toStartOf="@id/quantityTextView"
-                app:layout_constraintTop_toTopOf="@id/quantityTextView" />
+                app:layout_constraintTop_toTopOf="@id/quantityTextView"
+                app:tint="@color/white"/>
 
             <ImageButton
                 android:id="@+id/incrementButton"
@@ -89,9 +89,10 @@
                 android:src="@drawable/plus"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/popular_button_background"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white"/>
 
             <TextView
                 android:id="@+id/quantityTextView"
@@ -110,10 +111,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="24dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/popular_button_background"
                 android:src="@drawable/trash"
                 app:layout_constraintEnd_toEndOf="@id/incrementButton"
-                app:layout_constraintTop_toBottomOf="@id/decrementButton" />
+                app:layout_constraintTop_toBottomOf="@id/decrementButton"
+                app:tint="@color/white"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

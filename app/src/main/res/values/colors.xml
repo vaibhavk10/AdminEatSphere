@@ -2,5 +2,70 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="light_grey">#D3D3D3</color>
+
+    <!-- Primary Brand Colors -->
+    <color name="primary">#FF5722</color>
+    <color name="primary_dark">#E64A19</color>
+    <color name="primary_light">#FFCCBC</color>
+
+    <!-- Accent Colors -->
+    <color name="accent">#4CAF50</color>
+    <color name="accent_dark">#388E3C</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- UI Colors -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#B00020</color>
+    <color name="success">#4CAF50</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="ripple_color">#33000000</color>
+    <color name="stroke_color">#1F000000</color>
+
+    <!-- Additional UI Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="shadow_color">#29000000</color>
+    <color name="overlay_color">#66000000</color>
+    <color name="light_grey">#F5F5F5</color>
+
+    <!-- Basic Colors -->
+    <color name="grey">#FF9E9E9E</color>
+    <color name="dark_grey">#FF616161</color>
+
+    <!-- UI Colors -->
+    <color name="warning">#FBC02D</color>
+    <color name="info">#0288D1</color>
+
+    <color name="state_pressed">#FF6200EE</color>
+    <color name="state_disabled">#61000000</color>
+    <color name="state_focused">#1F000000</color>
+
+    <!-- Shadows and Overlays -->
+    <color name="scrim_color">#80000000</color>
+
+    <!-- Additional UI Colors -->
+    <color name="button_background">#FF6200EE</color>
+    <color name="button_text">#FFFFFFFF</color>
+    <color name="chip_background">#FFEEEEEE</color>
+    <color name="highlight">#FFBB86FC</color>
+
+    <!-- Semantic Colors -->
+    <color name="error_light">#FFEF5350</color>
+    <color name="error_dark">#FFD32F2F</color>
+    <color name="success_light">#FF81C784</color>
+    <color name="success_dark">#FF388E3C</color>
+    <color name="warning_light">#FFFFF176</color>
+    <color name="warning_dark">#FFFBC02D</color>
+    <color name="info_light">#FF64B5F6</color>
+    <color name="info_dark">#FF1976D2</color>
+
+    <!-- Custom Colors -->
+    <color name="light_blue">#FF03A9F4</color>
+    <color name="deep_orange">#FFFF5722</color>
+    <color name="lime">#FFCDDC39</color>
+    <color name="pink">#FFE91E63</color>
+
 </resources>
