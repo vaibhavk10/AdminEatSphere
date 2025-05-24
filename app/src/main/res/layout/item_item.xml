@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="#319E58DB"
+            android:background="#34FA6604"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -31,7 +31,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 app:cardCornerRadius="15dp"
-                app:cardBackgroundColor="#319E58DB"
+                app:cardBackgroundColor="#34FA6604"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
