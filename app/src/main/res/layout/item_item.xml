@@ -1,121 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="8dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="15dp"
-        android:elevation="2dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_margin="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="#34FA6604"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="12dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/itemImageCardView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:cardCornerRadius="15dp"
-                app:cardBackgroundColor="#34FA6604"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/itemImageView"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Item image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/lasgna"
-                    android:layout_gravity="center" />
+                    android:src="@drawable/lasgna" />
             </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/itemNameTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/latoregular"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/latobold"
                 android:text="Spicy"
-                android:textColor="#CA8A04"
-                android:textSize="16sp"
+                android:textColor="#1F2937"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/quantityLayout"
                 app:layout_constraintStart_toEndOf="@id/itemImageCardView"
-                app:layout_constraintTop_toTopOf="@id/itemImageCardView" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/itemPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:fontFamily="@font/latoregular"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/latobold"
                 android:text="$ 4"
-                android:textColor="#CA8A04"
+                android:textColor="#059669"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@id/itemImageCardView"
-                app:layout_constraintStart_toEndOf="@id/itemImageCardView" />
+                app:layout_constraintStart_toEndOf="@id/itemImageCardView"
+                app:layout_constraintTop_toBottomOf="@id/itemNameTextView" />
 
-            <ImageButton
-                android:id="@+id/decrementButton"
+            <LinearLayout
+                android:id="@+id/quantityLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/minus"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/popular_button_background"
-                app:layout_constraintBottom_toBottomOf="@id/quantityTextView"
-                app:layout_constraintEnd_toStartOf="@id/quantityTextView"
-                app:layout_constraintTop_toTopOf="@id/quantityTextView"
-                app:tint="@color/white"/>
-
-            <ImageButton
-                android:id="@+id/incrementButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/plus"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/popular_button_background"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white"/>
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/quantityTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textColor="#CA8A04"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintBottom_toBottomOf="@id/incrementButton"
-                app:layout_constraintEnd_toStartOf="@id/incrementButton"
-                app:layout_constraintTop_toTopOf="@id/incrementButton" />
+                <ImageButton
+                    android:id="@+id/decrementButton"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/circle_button_background"
+                    android:contentDescription="Decrease quantity"
+                    android:padding="8dp"
+                    android:src="@drawable/minus"
+                    app:tint="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/quantityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:fontFamily="@font/latobold"
+                    android:text="10"
+                    android:textColor="#1F2937"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/incrementButton"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/circle_button_background"
+                    android:contentDescription="Increase quantity"
+                    android:padding="8dp"
+                    android:src="@drawable/plus"
+                    app:tint="#FFFFFF" />
+            </LinearLayout>
 
             <ImageButton
                 android:id="@+id/deleteButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/popular_button_background"
+                android:background="@drawable/circle_button_background_red"
+                android:contentDescription="Delete item"
+                android:padding="8dp"
                 android:src="@drawable/trash"
-                app:layout_constraintEnd_toEndOf="@id/incrementButton"
-                app:layout_constraintTop_toBottomOf="@id/decrementButton"
-                app:tint="@color/white"/>
+                app:layout_constraintEnd_toEndOf="@+id/quantityLayout"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="@+id/quantityLayout"
+                app:layout_constraintTop_toBottomOf="@+id/quantityLayout"
+                app:tint="#FFFFFF" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
