@@ -8,6 +8,7 @@
     tools:context=".AddItemActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -21,21 +22,22 @@
 
             <ImageButton
                 android:id="@+id/backButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/circle_button_background"
+                android:padding="8dp"
                 android:src="@drawable/arrowleft"
-                app:tint="#333333" />
+                app:tint="#FFFFFF" />
 
             <TextView
                 android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="24dp"
                 android:fontFamily="@font/latobold"
                 android:text="Add New Item"
-                android:textColor="#333333"
-                android:textSize="24sp" />
+                android:textColor="#1F2937"
+                android:textSize="22sp" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -47,7 +49,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:padding="12dp">
 
             <!-- Item Name Input -->
             <com.google.android.material.textfield.TextInputLayout
@@ -55,10 +57,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:hint="Item Name"
                 app:boxStrokeColor="#3B82F6"
-                app:hintTextColor="@color/black"
+                app:hintTextColor="#000000"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -66,10 +68,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/latoregular"
-                    android:hint=""
+                    android:hint="Item Name"
                     android:inputType="text"
                     android:textColor="#000000"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="#000000"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,9 +81,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:hint="Price"
                 app:boxStrokeColor="#3B82F6"
+                app:hintTextColor="#000000"
                 app:layout_constraintTop_toBottomOf="@id/itemNameLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -89,22 +92,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/latoregular"
+                    android:hint="Price"
                     android:inputType="numberDecimal"
                     android:textColor="#000000"
-                    android:textColorHint="@android:color/black"
+                    android:textColorHint="#000000"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Item Image Label -->
             <TextView
-                android:id="@+id/itemImageLabel"
+                android:id="@+id/itemImageLabel1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/latobold"
                 android:text="Item Image"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:textColor="#1F2937"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/itemPriceLayout" />
 
@@ -112,11 +116,11 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/imageCard"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="160dp"
                 android:layout_marginTop="8dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
-                app:layout_constraintTop_toBottomOf="@id/itemImageLabel">
+                app:layout_constraintTop_toBottomOf="@id/itemImageLabel1">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -130,15 +134,15 @@
                         android:src="@drawable/lasgna" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/addImageButton"
+                        android:id="@+id/itemImageLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:layout_margin="12dp"
                         android:src="@drawable/plus"
                         app:backgroundTint="#3B82F6"
-                        app:tint="#FFFFFF"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:tint="#FFFFFF" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -148,9 +152,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:hint="Short Description"
                 app:boxStrokeColor="#3B82F6"
+                app:hintTextColor="#000000"
                 app:layout_constraintTop_toBottomOf="@id/imageCard">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -158,10 +163,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/latoregular"
-                    android:inputType="textMultiLine"
-                    android:lines="4"
                     android:gravity="top"
+                    android:hint="Short Description"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
                     android:textColor="#000000"
+                    android:textColorHint="#000000"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -170,11 +177,11 @@
                 android:id="@+id/ingredientsLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/latobold"
                 android:text="Ingredients"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:textColor="#1F2937"
+                android:textSize="16sp"
                 app:layout_constraintTop_toBottomOf="@id/descriptionLayout"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -217,9 +224,9 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/addItemButton"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="16dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
                 android:text="Add Item"
                 android:fontFamily="@font/latobold"
                 android:textSize="16sp"
